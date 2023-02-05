@@ -14,7 +14,6 @@ public class HelpCommand implements CommandExecutor {
 
             player.sendMessage("https://cloudplaceholder.skynetcloud.ca");
         }
-
         return true;
     }
 }
