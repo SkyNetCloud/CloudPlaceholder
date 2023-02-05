@@ -1,0 +1,7 @@
+name: CloudPlaceholder
+version: 0.1.2
+main: ca.skynetcloud.cloudplaceholder.SkyPlaceholders
+api-version: 1.16
+depend: [ PlaceholderAPI ]
+authors: [ SkyNetCloud ]
+description: A simple utility to link your PAPI with Pixelmon!
