@@ -6,6 +6,10 @@ import ca.skynetcloud.cloudplaceholder.impl.party.*;
 import ca.skynetcloud.cloudplaceholder.impl.party.evs.*;
 import ca.skynetcloud.cloudplaceholder.impl.party.ivs.*;
 import ca.skynetcloud.cloudplaceholder.impl.party.ivs.hypertrained.*;
+import ca.skynetcloud.cloudplaceholder.impl.party.movesets.PartyMoveset1Parser;
+import ca.skynetcloud.cloudplaceholder.impl.party.movesets.PartyMoveset2Parser;
+import ca.skynetcloud.cloudplaceholder.impl.party.movesets.PartyMoveset3Parser;
+import ca.skynetcloud.cloudplaceholder.impl.party.movesets.PartyMoveset4Parser;
 import ca.skynetcloud.cloudplaceholder.impl.trainer.*;
 import com.google.common.collect.Sets;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
@@ -104,7 +108,14 @@ public class SkyExpansion extends PlaceholderExpansion {
                 new PartyIvSPDefenceParser(),
                 new PartyIvSpeedParser(),
 
-                new PartyMovesetParser(),
+                new PartyMoveset1Parser(),
+                new PartyMoveset2Parser(),
+                new PartyMoveset3Parser(),
+                new PartyMoveset4Parser(),
+
+                new UltrabeastAmountParser(),
+                new LegendaryAmountParser(),
+                new ShinyAmountParser(),
 
                 new EvIvPercentageParser(),
                 new ExperienceParser(),

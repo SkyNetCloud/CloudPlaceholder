@@ -1,41 +1,37 @@
-package ca.skynetcloud.cloudplaceholder.impl.party;
+package ca.skynetcloud.cloudplaceholder.impl.party.movesets;
 
 import ca.skynetcloud.cloudplaceholder.SkyExpansion;
 import ca.skynetcloud.cloudplaceholder.impl.PartyParser;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import org.bukkit.entity.Player;
 
-import java.util.Arrays;
+public class PartyMoveset3Parser extends PartyParser {
 
-public class PartyMovesetParser extends PartyParser {
-
-    public PartyMovesetParser() {
+    public PartyMoveset3Parser() {
         super(0);
     }
 
-    protected PartyMovesetParser(final int slot) {
+    protected PartyMoveset3Parser(final int slot) {
         super(slot);
     }
     @Override
     public String getID() {
-            return "party_" + this.slot + "_moveset";
+        return "party_" + this.slot + "_three_" + "_moveset";
     }
 
     @Override
     public void register() {
         for (int i = 1; i <= 6; ++i) {
-            SkyExpansion.registerParser(new PartyMovesetParser(i));
+            SkyExpansion.registerParser(new PartyMoveset3Parser(i));
         }
     }
 
     @Override
     public Object parse(Player p0, Pokemon pokemon, String[] p2) {
-        if (pokemon.getMoveset().isEmpty()) {
+        if (pokemon == null || pokemon.getMoveset().isEmpty() || pokemon.getMoveset().attacks[2] == null) {
             return "N/A";
         }
 
-        return Arrays.stream(pokemon.getMoveset().attacks).toArray();
-
-
+        return pokemon.getMoveset().attacks[2].getMove().getAttackName();
     }
 }
