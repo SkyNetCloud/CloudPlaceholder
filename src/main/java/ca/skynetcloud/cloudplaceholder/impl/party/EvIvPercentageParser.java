@@ -7,7 +7,6 @@ import ca.skynetcloud.cloudplaceholder.impl.PartyParser;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import org.bukkit.entity.Player;
 
-import java.util.Arrays;
 
 public class EvIvPercentageParser extends PartyParser
 {
@@ -39,8 +38,8 @@ public class EvIvPercentageParser extends PartyParser
     @Override
     public Object parse(final Player player, final Pokemon pokemon, final String[] args) {
         if (this.isEv) {
-            return Arrays.stream(pokemon.getEVs().getArray()).sum() / 510 * 100;
+            return String.format("%.2f", pokemon.getEVs().getTotal() * 100.0D / 510.0D);
         }
-        return Arrays.stream(pokemon.getIVs().getArray()).sum() / 186 * 100;
+       return pokemon.getIVs().getPercentageString(2);
     }
 }

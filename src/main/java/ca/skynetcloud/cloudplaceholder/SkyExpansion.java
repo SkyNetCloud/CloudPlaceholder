@@ -3,6 +3,9 @@ package ca.skynetcloud.cloudplaceholder;
 import ca.skynetcloud.cloudplaceholder.api.Parser;
 import ca.skynetcloud.cloudplaceholder.impl.global.SpawnerTimer;
 import ca.skynetcloud.cloudplaceholder.impl.party.*;
+import ca.skynetcloud.cloudplaceholder.impl.party.evs.*;
+import ca.skynetcloud.cloudplaceholder.impl.party.ivs.*;
+import ca.skynetcloud.cloudplaceholder.impl.party.ivs.hypertrained.*;
 import ca.skynetcloud.cloudplaceholder.impl.trainer.*;
 import com.google.common.collect.Sets;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
@@ -58,11 +61,63 @@ public class SkyExpansion extends PlaceholderExpansion {
             final String[] args = formattedInput.split("_");
             return parser.parse(player, args).toString();
         }
-        return "Could not parse request check syntax please";
+        return "Could not parse request check syntax please"+ parser.toString();
     }
 
     static {
-        defaultParsers = Sets.newHashSet(new UltraBeastsParser(), new HyperTrainedParser(),new PartyNbtParser(),new OTNameParser(), new OTUuidParser(),new HiddenAbilityParser(),new SpeciesEvoParser(), new CaughtCountParser(), new DexPercentageParser(), new SeenCountParser(), new WinLossParser(false), new WinLossParser(true), new WinRateParser(), new BalanceParser(), new AbilityParser(), new CustomTextureParser(), new DexNumberParser(), new EvIvParser(), new EvIvPercentageParser(), new ExperienceParser(), new FormParser(), new GenderParser(), new GmaxParser(), new LevelParser(), new MaxLevelParser(), new NatureParser(), new NicknameParser(), new PokeballParser(), new ShinyParser(), new SpeciesParser(), new SpawnerTimer(true), new SpawnerTimer(false));
+        defaultParsers = Sets.newHashSet(
+                new UltraBeastsParser(),
+                new PartyNbtParser(),
+                new OTNameParser(),
+                new OTUuidParser(),
+                new HiddenAbilityParser(),
+                new SpeciesEvoParser(),
+                new CaughtCountParser(),
+                new DexPercentageParser(),
+                new SeenCountParser(),
+                new WinLossParser(false),
+                new WinLossParser(true),
+                new WinRateParser(),
+                new BalanceParser(),
+                new AbilityParser(),
+                new CustomTextureParser(),
+                new DexNumberParser(),
+
+                new PartyEvAttackParser(),
+                new PartyEvDefenceParser(),
+                new PartyEvSPAttackParser(),
+                new PartyEvSPDefenceParser(),
+                new PartyEvHpParser(),
+                new PartyEvSpeedParser(),
+
+                new PartyIvHyperTrainedHpParser(),
+                new PartyIvHyperTrainedAttackParser(),
+                new PartyIvHyperTrainedDefenceParser(),
+                new PartyIvHpyerTrainedSPAttackParser(),
+                new PartyIvHpyerTrainedSPDefenceParser(),
+                new PartyIvHpyerTrainedSpeedParser(),
+
+                new PartyIvHpParser(),
+                new PartyIvAttackParser(),
+                new PartyIvDefenceParser(),
+                new PartyIvSPAttackParser(),
+                new PartyIvSPDefenceParser(),
+                new PartyIvSpeedParser(),
+
+                new EvIvPercentageParser(),
+                new ExperienceParser(),
+                new FormParser(),
+                new GenderParser(),
+                new GmaxParser(),
+                new LevelParser(),
+                new MaxLevelParser(),
+                new NatureParser(),
+                new NicknameParser(),
+                new PokeballParser(),
+                new ShinyParser(),
+                new SpeciesParser(),
+                new SpawnerTimer(true),
+                new SpawnerTimer(false));
         parsers = new HashMap<String, Parser>();
     }
 }

@@ -1,5 +1,5 @@
 name: CloudPlaceholder
-version: 0.1.6
+version: 0.1.7
 main: ca.skynetcloud.cloudplaceholder.SkyPlaceholders
 api-version: 1.16
 depend: [ PlaceholderAPI ]

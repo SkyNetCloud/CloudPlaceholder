@@ -32,6 +32,9 @@ public class HiddenAbilityParser extends PartyParser
     
     @Override
     public Object parse(final Player player, final Pokemon pokemon, final String[] args) {
+        if (pokemon.isUltraBeast() && pokemon.getSpecies().getDefaultForm().getAbilities().getHiddenAbilities() == null){
+            return "N/A";
+        }
         return pokemon.getSpecies().getDefaultForm().getAbilities().getHiddenAbilities()[0].getLocalizedName();
     }
 }
