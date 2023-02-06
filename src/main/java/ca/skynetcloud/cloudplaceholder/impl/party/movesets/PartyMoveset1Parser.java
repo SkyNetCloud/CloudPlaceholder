@@ -16,7 +16,7 @@ public class PartyMoveset1Parser extends PartyParser {
     }
     @Override
     public String getID() {
-            return "party_" + this.slot + "_one_" + "_moveset";
+            return "party_" + this.slot + "_one" + "_moveset";
     }
 
     @Override
