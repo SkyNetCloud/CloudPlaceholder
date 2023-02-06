@@ -16,7 +16,7 @@ public class OTNameParser extends PartyParser {
     }
     @Override
     public String getID() {
-        return "ot_" + this.slot + "_uuid";
+        return "ot_" + this.slot + "_name";
     }
 
     @Override

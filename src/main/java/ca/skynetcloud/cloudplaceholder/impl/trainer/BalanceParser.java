@@ -6,6 +6,7 @@ import ca.skynetcloud.cloudplaceholder.SkyExpansion;
 import ca.skynetcloud.cloudplaceholder.api.Parser;
 import com.pixelmonmod.pixelmon.api.economy.BankAccount;
 import com.pixelmonmod.pixelmon.api.economy.BankAccountProxy;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import org.bukkit.entity.Player;
 
 import java.math.BigDecimal;
@@ -28,7 +29,6 @@ public class BalanceParser implements Parser
 
     @Override
     public Object parse(final Player player, final String[] args) {
-        final Optional<? extends BankAccount> bankAccount = BankAccountProxy.getBankAccount(player.getUniqueId());
-        return bankAccount.map((Function<? super BankAccount, ? extends BigDecimal>)BankAccount::getBalance);
+        return BankAccountProxy.getBankAccount((ServerPlayerEntity) player).map(BankAccount::getBalance).orElse(BigDecimal.ZERO).toPlainString();
     }
 }

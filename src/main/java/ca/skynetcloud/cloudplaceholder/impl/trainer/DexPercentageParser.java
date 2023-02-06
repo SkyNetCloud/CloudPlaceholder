@@ -31,6 +31,6 @@ public class DexPercentageParser implements Parser
     @Override
     public Object parse(final Player player, final String[] args) {
         final PlayerPokedex pokedex = this.getParty(player).playerPokedex;
-        return this.FORMAT.format(pokedex.countCaught() / (double)pokedex.countSeen() * 100.0);
+        return pokedex.getCaughtCompletionPercentage();
     }
 }

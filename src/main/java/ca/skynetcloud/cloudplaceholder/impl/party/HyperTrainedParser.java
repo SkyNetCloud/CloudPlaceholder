@@ -13,30 +13,27 @@ import org.bukkit.entity.Player;
 
 
 
-public class EvIvParser extends PartyParser
+public class HyperTrainedParser extends PartyParser
 {
-    private final boolean isEv;
     private final String suffix;
     private final BattleStatsType stat;
-    
-    public EvIvParser() {
+
+    public HyperTrainedParser() {
         super(0);
-        this.isEv = false;
         this.suffix = "";
         this.stat = BattleStatsType.NONE;
 
     }
-    
-    protected EvIvParser(final int slot, final boolean isEv, final String suffix, final BattleStatsType stat) {
+
+    protected HyperTrainedParser(final int slot, final String suffix, final BattleStatsType stat) {
         super(slot);
-        this.isEv = isEv;
         this.suffix = suffix;
         this.stat = stat;
     }
-    
+
     @Override
     public String getID() {
-        return "party_" + this.slot + "_" + (this.isEv ? "ev" : "iv") + "_" + this.suffix;
+        return "party_" + this.slot + "_hypertrained_" + this.suffix;
     }
 
     @Override
@@ -50,15 +47,13 @@ public class EvIvParser extends PartyParser
             }
         }
     }
-    
+
     @Override
     public Object parse(final Player player, final Pokemon pokemon, final String[] args) {
-        if (this.isEv) {
-            return pokemon.getEVs().getStat(this.stat);
-        }
-        return pokemon.getIVs().getStat(this.stat);
+
+        return pokemon.getIVs().isHyperTrained(this.stat);
     }
-    
+
     private String resolveSuffix(final BattleStatsType stat) {
         switch (stat) {
             case ATTACK: {
