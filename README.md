@@ -33,6 +33,10 @@ A simple utility to link your PAPI with Pixelmon!
 
 ```%cloud_party_slot_dynamaxlevel%``` - returns the Dynamax Level of the specified Pixelmon
 
+```%cloud_OT_slot_name%``` - returns the Original Trainer's name of the specified Pixelmon
+
+```%cloud_OT_slot_uuid%``` - returns the Original Trainer's UUID of the specified Pixelmon
+
 
 
 
