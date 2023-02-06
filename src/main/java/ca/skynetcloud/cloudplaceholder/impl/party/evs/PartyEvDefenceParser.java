@@ -29,9 +29,8 @@ public class PartyEvDefenceParser extends PartyParser {
     @Override
     public void register() {
         for (int i = 1; i <= 6; ++i) {
-            for (final BattleStatsType stat : BattleStatsType.getAllBattleStatValues()) {
                 SkyExpansion.registerParser(new PartyEvDefenceParser(i, stat));
-            }
+
         }
     }
 

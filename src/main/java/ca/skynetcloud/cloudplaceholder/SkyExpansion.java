@@ -61,7 +61,7 @@ public class SkyExpansion extends PlaceholderExpansion {
             final String[] args = formattedInput.split("_");
             return parser.parse(player, args).toString();
         }
-        return "Could not parse request check syntax please"+ parser.toString();
+        return "Could not parse request check syntax please";
     }
 
     static {
@@ -104,6 +104,8 @@ public class SkyExpansion extends PlaceholderExpansion {
                 new PartyIvSPDefenceParser(),
                 new PartyIvSpeedParser(),
 
+                new PartyMovesetParser(),
+
                 new EvIvPercentageParser(),
                 new ExperienceParser(),
                 new FormParser(),
@@ -118,6 +120,6 @@ public class SkyExpansion extends PlaceholderExpansion {
                 new SpeciesParser(),
                 new SpawnerTimer(true),
                 new SpawnerTimer(false));
-        parsers = new HashMap<String, Parser>();
+        parsers = new HashMap<>();
     }
 }

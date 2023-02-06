@@ -29,13 +29,17 @@ A simple utility to link your PAPI with Pixelmon!
 
 ```%cloud_party_slot_gmax%``` - returns a "Yes" / "No"
 
-```%cloud_party_slot_hidden_ability%``` - returns the hidden ability of the specified Pixelmon
+```%cloud_party_slot_hidden_ability%``` - returns the hidden ability of the specified Pixelmon (If pokemon doesn't have one it will return N/A)
+
+```%cloud_party_slot_moveset``` - return moveset of pokemon
 
 ```%cloud_party_slot_dynamaxlevel%``` - returns the Dynamax Level of the specified Pixelmon
 
-```%cloud_OT_slot_name%``` - returns the Original Trainer's name of the specified Pixelmon
+```%cloud_party_ot_slot_name%``` - returns the Original Trainer's name of the specified Pixelmon
 
-```%cloud_OT_slot_uuid%``` - returns the Original Trainer's UUID of the specified Pixelmon
+```%cloud_party_ot_slot_uuid%``` - returns the Original Trainer's UUID of the specified Pixelmon
+
+```%cloud_ultrabeast``` - returns a "Yes" / "No"
 
 
 
@@ -45,6 +49,8 @@ A simple utility to link your PAPI with Pixelmon!
 ```%cloud_party_slot_iv_stat%``` - returns the IV value from 0 to 31"
 
 ```%cloud_party_slot_ev_stat%``` - returns the EV value from 0 to 252"
+
+```%cloud_party_slot_hypertrained_iv_stat%``` - returns the ture or false if a bottle cap was used on a stats
 
 ```%cloud_party_slot_iv_percentage%``` - returns the total IV percentage
 
