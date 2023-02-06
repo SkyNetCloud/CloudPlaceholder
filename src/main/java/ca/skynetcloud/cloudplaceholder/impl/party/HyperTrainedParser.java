@@ -50,12 +50,14 @@ public class HyperTrainedParser extends PartyParser
 
     @Override
     public Object parse(final Player player, final Pokemon pokemon, final String[] args) {
-
         return pokemon.getIVs().isHyperTrained(this.stat);
     }
 
     private String resolveSuffix(final BattleStatsType stat) {
         switch (stat) {
+            case HP:{
+                return "hp";
+            }
             case ATTACK: {
                 return "atk";
             }

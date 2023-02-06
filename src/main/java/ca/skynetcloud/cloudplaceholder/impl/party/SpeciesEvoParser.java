@@ -22,7 +22,7 @@ public class SpeciesEvoParser extends PartyParser  {
 
     @Override
     public String getID() {
-        return "party_" + this.slot + "_name";
+        return "party_" + this.slot + "_specisoevo";
     }
 
     @Override

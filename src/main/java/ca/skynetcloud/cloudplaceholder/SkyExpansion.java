@@ -32,7 +32,7 @@ public class SkyExpansion extends PlaceholderExpansion {
     }
 
     public String getVersion() {
-        return "0.1.5";
+        return "0.1.6";
     }
 
     public boolean register() {
@@ -62,7 +62,7 @@ public class SkyExpansion extends PlaceholderExpansion {
     }
 
     static {
-        defaultParsers = Sets.newHashSet(new HpParser(),new HyperTrainedParser(),new PartyNbtParser(),new OTNameParser(), new OTUuidParser(),new HiddenAbilityParser(),new SpeciesEvoParser(), new CaughtCountParser(), new DexPercentageParser(), new SeenCountParser(), new WinLossParser(false), new WinLossParser(true), new WinRateParser(), new BalanceParser(), new AbilityParser(), new CustomTextureParser(), new DexNumberParser(), new EvIvParser(), new EvIvPercentageParser(), new ExperienceParser(), new FormParser(), new GenderParser(), new GmaxParser(), new LevelParser(), new MaxLevelParser(), new NatureParser(), new NicknameParser(), new PokeballParser(), new ShinyParser(), new SpeciesParser(), new SpawnerTimer(true), new SpawnerTimer(false));
+        defaultParsers = Sets.newHashSet(new UltraBeastsParser(), new HyperTrainedParser(),new PartyNbtParser(),new OTNameParser(), new OTUuidParser(),new HiddenAbilityParser(),new SpeciesEvoParser(), new CaughtCountParser(), new DexPercentageParser(), new SeenCountParser(), new WinLossParser(false), new WinLossParser(true), new WinRateParser(), new BalanceParser(), new AbilityParser(), new CustomTextureParser(), new DexNumberParser(), new EvIvParser(), new EvIvPercentageParser(), new ExperienceParser(), new FormParser(), new GenderParser(), new GmaxParser(), new LevelParser(), new MaxLevelParser(), new NatureParser(), new NicknameParser(), new PokeballParser(), new ShinyParser(), new SpeciesParser(), new SpawnerTimer(true), new SpawnerTimer(false));
         parsers = new HashMap<String, Parser>();
     }
 }

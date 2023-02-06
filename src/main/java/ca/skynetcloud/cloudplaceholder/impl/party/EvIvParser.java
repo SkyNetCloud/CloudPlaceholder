@@ -61,6 +61,9 @@ public class EvIvParser extends PartyParser
     
     private String resolveSuffix(final BattleStatsType stat) {
         switch (stat) {
+            case HP: {
+                return "hp";
+            }
             case ATTACK: {
                 return "atk";
             }
