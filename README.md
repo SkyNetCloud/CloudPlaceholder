@@ -41,6 +41,13 @@ A simple utility to link your PAPI with Pixelmon!
 
 ```%cloud_ultrabeast``` - returns a "Yes" / "No"
 
+```%cloud_party_legendary_amount%``` - returns amount of legendary Player has in total
+
+```%cloud_party_legendary_amount%``` - returns amount of shiny Player has in total
+
+```%cloud_party_legendary_amount%``` - returns amount of ultrabeast Player has in total
+
+
 
 
 
