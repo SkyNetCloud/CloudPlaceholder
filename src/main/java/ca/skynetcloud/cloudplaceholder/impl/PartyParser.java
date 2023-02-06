@@ -2,7 +2,6 @@ package ca.skynetcloud.cloudplaceholder.impl;
 
 import ca.skynetcloud.cloudplaceholder.api.Parser;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
-import com.pixelmonmod.pixelmon.api.pokemon.species.Species;
 import org.bukkit.entity.Player;
 
 import java.util.Arrays;

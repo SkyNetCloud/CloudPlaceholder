@@ -10,8 +10,6 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import org.bukkit.entity.Player;
 
 import java.math.BigDecimal;
-import java.util.Optional;
-import java.util.function.Function;
 
 public class BalanceParser implements Parser
 {

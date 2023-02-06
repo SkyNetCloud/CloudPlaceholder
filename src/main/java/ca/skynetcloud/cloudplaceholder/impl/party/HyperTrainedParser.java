@@ -5,7 +5,6 @@ package ca.skynetcloud.cloudplaceholder.impl.party;
 
 import ca.skynetcloud.cloudplaceholder.SkyExpansion;
 import ca.skynetcloud.cloudplaceholder.impl.PartyParser;
-import com.pixelmonmod.pixelmon.api.events.pokemon.BottleCapEvent;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.stats.BattleStatsType;
 import org.bukkit.entity.Player;
