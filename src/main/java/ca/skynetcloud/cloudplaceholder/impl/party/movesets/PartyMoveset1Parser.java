@@ -16,7 +16,7 @@ public class PartyMoveset1Parser extends PartyParser {
     }
     @Override
     public String getID() {
-            return "party_" + this.slot + "_one" + "_moveset";
+            return "party_" + this.slot + "_one"+ "_moveset";
     }
 
     @Override
@@ -28,12 +28,11 @@ public class PartyMoveset1Parser extends PartyParser {
 
     @Override
     public Object parse(Player p0, Pokemon pokemon, String[] p2) {
-        if (pokemon.getMoveset().isEmpty()) {
+        if (pokemon == null || pokemon.getMoveset().isEmpty() || pokemon.getMoveset().attacks[0] == null) {
             return "N/A";
         }
 
-        return pokemon.getMoveset().attacks[0].getMove().getAttackName() + pokemon.getMoveset().attacks[2].getMove().getAttackName() + pokemon.getMoveset().attacks[3].getMove().getAttackName() + pokemon.getMoveset().attacks[4].getMove().getAttackName();
-
+        return pokemon.getMoveset().attacks[0].getMove().getAttackName();
 
     }
 }

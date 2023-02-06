@@ -31,7 +31,6 @@ public class PartyMoveset3Parser extends PartyParser {
         if (pokemon == null || pokemon.getMoveset().isEmpty() || pokemon.getMoveset().attacks[2] == null) {
             return "N/A";
         }
-
         return pokemon.getMoveset().attacks[2].getMove().getAttackName();
     }
 }
