@@ -5,8 +5,6 @@ import ca.skynetcloud.cloudplaceholder.impl.PartyParser;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import org.bukkit.entity.Player;
 
-import java.util.Arrays;
-
 public class SpeciesEvoParser extends PartyParser  {
 
     public SpeciesEvoParser() {
@@ -33,7 +31,7 @@ public class SpeciesEvoParser extends PartyParser  {
 
     @Override
     public Object parse(final Player player, final Pokemon species, final String[] args) {
-        return String.join(", ", Arrays.asList(species.getSpecies().getDefaultForm().getPreEvolutions().toString()));
+        return species.getSpecies().getDefaultForm().getPreEvolutions().listIterator().toString();
     }
 
 }
