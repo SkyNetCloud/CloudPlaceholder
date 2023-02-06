@@ -5,6 +5,8 @@ import ca.skynetcloud.cloudplaceholder.impl.PartyParser;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import org.bukkit.entity.Player;
 
+import java.util.Arrays;
+
 public class PartyMovesetParser extends PartyParser {
 
     public PartyMovesetParser() {
@@ -28,10 +30,12 @@ public class PartyMovesetParser extends PartyParser {
 
     @Override
     public Object parse(Player p0, Pokemon pokemon, String[] p2) {
-        if (pokemon.getMoveset().isEmpty() || pokemon.getMoveset().attacks[2] == null) {
+        if (pokemon.getMoveset().isEmpty()) {
             return "N/A";
         }
 
-        return pokemon.getMoveset().attacks[0].getMove().getAttackName();
+        return Arrays.stream(pokemon.getMoveset().attacks).toArray();
+
+
     }
 }

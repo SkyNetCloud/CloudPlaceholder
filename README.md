@@ -31,7 +31,7 @@ A simple utility to link your PAPI with Pixelmon!
 
 ```%cloud_party_slot_hidden_ability%``` - returns the hidden ability of the specified Pixelmon (If pokemon doesn't have one it will return N/A)
 
-```%cloud_party_slot_moveset``` - return moveset of pokemon
+```%cloud_party_slot_moveset%``` - return moveset of pokemon
 
 ```%cloud_party_slot_dynamaxlevel%``` - returns the Dynamax Level of the specified Pixelmon
 
