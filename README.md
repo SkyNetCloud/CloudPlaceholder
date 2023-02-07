@@ -68,6 +68,8 @@ A simple utility to link your PAPI with Pixelmon!
 
 ## Trainer Placeholders
 
+```%cloud_trainer_capture_combo%``` - returns catch combo and pokemon that being catch
+
 ```%cloud_trainer_dexcount%``` - returns the number of Pixelmon caught
 
 ```%cloud_trainer_dexpercentage%``` - returns the percentage of Dex completion
