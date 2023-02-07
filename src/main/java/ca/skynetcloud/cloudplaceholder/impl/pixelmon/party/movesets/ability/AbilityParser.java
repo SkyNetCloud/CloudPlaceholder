@@ -1,9 +1,9 @@
 
 
-package ca.skynetcloud.cloudplaceholder.impl.party;
+package ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.movesets.ability;
 
 import ca.skynetcloud.cloudplaceholder.SkyExpansion;
-import ca.skynetcloud.cloudplaceholder.impl.PartyParser;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.PartyParser;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import org.bukkit.entity.Player;
 
