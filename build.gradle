@@ -5,7 +5,7 @@ plugins {
 
 
 group = 'ca.skynetcloud'
-version = '0.2.1'
+version = '0.2.2'
 
 
 java {
@@ -141,7 +141,7 @@ githubRelease {
     FilenameFilter filter = { dir, filename -> filename.contains(project.version) }
     releaseAssets = jar.destinationDir.listFiles filter
     allowUploadToExisting.set false // Setting this to true will allow this plugin to upload artifacts to a release if it found an existing one. If overwrite is set to true, this option is ignored.
-    overwrite true // by default false; if set to true, will delete an existing release with the same tag and name
+    overwrite false // by default false; if set to true, will delete an existing release with the same tag and name
     dryRun false // by default false; you can use this to see what actions would be taken without making a release
     apiEndpoint "https://api.github.com" // should only change for github enterprise users
     client // This is the okhttp client used for http requests

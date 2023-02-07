@@ -1,16 +1,17 @@
 package ca.skynetcloud.cloudplaceholder;
 
 import ca.skynetcloud.cloudplaceholder.api.Parser;
-import ca.skynetcloud.cloudplaceholder.impl.global.SpawnerTimer;
-import ca.skynetcloud.cloudplaceholder.impl.party.*;
-import ca.skynetcloud.cloudplaceholder.impl.party.evs.*;
-import ca.skynetcloud.cloudplaceholder.impl.party.ivs.*;
-import ca.skynetcloud.cloudplaceholder.impl.party.ivs.hypertrained.*;
-import ca.skynetcloud.cloudplaceholder.impl.party.movesets.PartyMoveset1Parser;
-import ca.skynetcloud.cloudplaceholder.impl.party.movesets.PartyMoveset2Parser;
-import ca.skynetcloud.cloudplaceholder.impl.party.movesets.PartyMoveset3Parser;
-import ca.skynetcloud.cloudplaceholder.impl.party.movesets.PartyMoveset4Parser;
-import ca.skynetcloud.cloudplaceholder.impl.trainer.*;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.global.SpawnerTimer;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.*;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.evs.*;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.ivs.*;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.ivs.hypertrained.*;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.movesets.PartyMoveset1Parser;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.movesets.PartyMoveset2Parser;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.movesets.PartyMoveset3Parser;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.movesets.PartyMoveset4Parser;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.party.movesets.ability.AbilityParser;
+import ca.skynetcloud.cloudplaceholder.impl.pixelmon.trainer.*;
 import com.google.common.collect.Sets;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
@@ -117,7 +118,9 @@ public class SkyExpansion extends PlaceholderExpansion {
                 new LegendaryAmountParser(),
                 new ShinyAmountParser(),
 
-                new EvIvPercentageParser(),
+                new CatchComboParser(),
+                new EvPercentageParser(),
+                new IvPercentageParser(),
                 new ExperienceParser(),
                 new FormParser(),
                 new GenderParser(),
