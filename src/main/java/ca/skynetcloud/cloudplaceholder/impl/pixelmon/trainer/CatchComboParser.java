@@ -22,6 +22,10 @@ public class CatchComboParser implements Parser {
     @Override
     public Object parse(Player p0, String[] p1) {
         final PlayerPartyStorage storage = StorageProxy.getParty(p0.getUniqueId());
-        return storage.transientData.captureCombo.getCurrentSpecies().getName() + storage.transientData.captureCombo.getCurrentCombo();
+        if(storage.transientData.captureCombo.getCurrentSpecies().getName() == null){
+            return "N/A";
+        }
+
+        return storage.transientData.captureCombo.getCurrentSpecies().getName() + " : " + storage.transientData.captureCombo.getCurrentCombo();
     }
 }
