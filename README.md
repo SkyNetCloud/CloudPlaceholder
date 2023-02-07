@@ -47,9 +47,13 @@ A simple utility to link your PAPI with Pixelmon!
 
 ```%cloud_party_ub_amount%``` - returns amount of ultrabeast Player has in total
 
+```%cloud_party_slot_pre_evo%``` - returns a sting list of the name of the pre evo of the given Pokemon
+
 **The following 'num' can be replaced with ("one","two","three","four")**
 
 ```%cloud_party_slot_num_moveset%``` - returns pokemon slot move set
+
+
 
 
 
