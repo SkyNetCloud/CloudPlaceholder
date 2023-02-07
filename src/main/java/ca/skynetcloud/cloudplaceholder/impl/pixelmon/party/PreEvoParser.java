@@ -36,7 +36,7 @@ public class PreEvoParser extends PartyParser  {
     @Override
     public Object parse(final Player player, final Pokemon pokemon, final String[] args) {
         List<Species> species = Lists.newArrayList();
-        return  species.stream().map(n-> pokemon.getSpecies().getDefaultForm().getPreEvolutions()).toString();
+        return  species.stream().map(n-> pokemon.getSpecies().getDefaultForm().getPreEvolutions()).toArray();
     }
 
 }
