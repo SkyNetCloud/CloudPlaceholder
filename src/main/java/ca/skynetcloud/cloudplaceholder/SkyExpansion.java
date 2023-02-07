@@ -76,7 +76,7 @@ public class SkyExpansion extends PlaceholderExpansion {
                 new OTNameParser(),
                 new OTUuidParser(),
                 new HiddenAbilityParser(),
-                new SpeciesEvoParser(),
+                new PreEvoParser(),
                 new CaughtCountParser(),
                 new DexPercentageParser(),
                 new SeenCountParser(),
